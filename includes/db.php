@@ -2,7 +2,7 @@
 $host = 'localhost'; 
 $db = 'chat_app'; 
 $user = 'root'; 
-$pass = ''; 
+$pass = 'password'; 
 
 $mysqli = new mysqli($host, $user, $pass, $db);
 
