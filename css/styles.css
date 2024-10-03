@@ -42,8 +42,13 @@ body {
     z-index: 1; /* Sit on top */
     left: 0;
     top: 0;
+    left: 50%; /* Center the modal horizontally */
+    top: 50%; /* Center the modal vertically */
+    transform: translate(-50%, -50%); /* Offset the position to truly center it */
+    width: 50%; /* Width of the modal */
+    max-width: 500px; /* Maximum width for larger screens */
     width: 100%; /* Full width */
-    height: 100%; /* Full height */
+    height: 50%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
