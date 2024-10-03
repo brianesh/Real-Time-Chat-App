@@ -1,6 +1,7 @@
 .container {
     text-align: center; /* Center text in container */
     margin: 20px; /* Add some margin around the container */
+    margin-top: 250px;
 }
 
 button {
@@ -22,11 +23,23 @@ button {
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
     padding: 20px; /* Padding inside the modal */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+/* Position Login Modal on the Left */
+#loginModal {
+    left: 10%; /* Adjust to position on the left */
+}
+
+/* Position Register Modal on the Right */
+#registerModal {
+    right: 10%; /* Adjust to position on the right */
 }
 
 /* Modal Content */
 .modal-content {
     padding: 20px;
+    text-align: center; /* Center text inside modal */
 }
 
 /* Close Button */
