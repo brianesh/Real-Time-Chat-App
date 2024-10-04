@@ -18,6 +18,15 @@ body, html {
     position: relative;
     width: 400px;
     text-align: center;
+    transition: transform 0.5s ease;
+}
+
+.container.slide-left {
+    transform: translateX(-150%);
+}
+
+.container.slide-right {
+    transform: translateX(150%);
 }
 
 /* Main modal and buttons */
@@ -46,9 +55,23 @@ h1 {
     width: 300px;
     z-index: 10;
     opacity: 0;
-    transition: transform 0.5s, opacity 0.5s;
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
+.modal.show {
+    display: block;
+    opacity: 1;
+}
+
+.modal.slide-in-left {
+    transform: translate(-150%, -50%);
+}
+
+.modal.slide-in-right {
+    transform: translate(150%, -50%);
+}
+
+/* Modal specific styling */
 .modal-content {
     display: flex;
     flex-direction: column;
@@ -66,22 +89,7 @@ h1 {
     margin: 10px 0;
 }
 
-/* Transition animations */
-.show-modal {
-    display: block;
-    opacity: 1;
-}
-
-.slide-in-left {
-    transform: translate(-150%, -50%);
-}
-
-.slide-in-right {
-    transform: translate(150%, -50%);
-}
-
 /* Background change */
 body.modal-active {
     background-color: rgba(0, 0, 0, 0.5);
 }
-
