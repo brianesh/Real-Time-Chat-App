@@ -1,71 +1,87 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body, html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
 .container {
-    text-align: center; /* Center text in container */
-    margin: 20px; /* Add some margin around the container */
-    margin-top: 250px;
+    position: relative;
+    width: 400px;
+    text-align: center;
 }
 
-button {
-    margin: 10px; /* Add spacing between buttons */
-    padding: 10px 20px; /* Add padding to buttons */
-    font-size: 16px; /* Increase font size */
-}
-
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    top: 50%; /* Center the modal vertically */
-    transform: translateY(-50%); /* Offset the position to truly center it */
-    width: 300px; /* Set a fixed width for the modal */
-    height: auto; /* Height will adjust based on content */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(255, 255, 255, 1); /* White background */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
-    padding: 20px; /* Padding inside the modal */
-    transition: transform 0.3s ease; /* Smooth transition */
-}
-
-/* Position Login Modal on the Left */
-#loginModal {
-    left: 10%; /* Adjust to position on the left */
-}
-
-/* Position Register Modal on the Right */
-#registerModal {
-    right: 10%; /* Adjust to position on the right */
-}
-
-/* Modal Content */
-.modal-content {
-    padding: 20px;
-    text-align: center; /* Center text inside modal */
-}
-
-/* Close Button */
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
+/* Main modal and buttons */
+.container button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
     cursor: pointer;
 }
 
-/* Overlay styles */
-.modal::before {
-    content: '';
-    display: block;
-    position: fixed; /* Cover the whole screen */
-    top: 0;
-    left: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
-    z-index: -1; /* Behind the modal */
+h1 {
+    margin-bottom: 20px;
 }
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    z-index: 10;
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.form-group {
+    margin: 10px 0;
+}
+
+/* Transition animations */
+.show-modal {
+    display: block;
+    opacity: 1;
+}
+
+.slide-in-left {
+    transform: translate(-150%, -50%);
+}
+
+.slide-in-right {
+    transform: translate(150%, -50%);
+}
+
+/* Background change */
+body.modal-active {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
