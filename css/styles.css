@@ -14,34 +14,35 @@ body, html {
     background-color: #f0f0f0;
 }
 
-.container {
+.modal-container {
     position: relative;
     width: 400px;
     text-align: center;
     transition: transform 0.5s ease;
 }
 
-.container.slide-left {
-    transform: translateX(-150%);
+/* Centering the main content */
+.modal-content-main {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    z-index: 5;
+    transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-.container.slide-right {
-    transform: translateX(150%);
+/* Add slight slide effect for main content */
+.modal-container.slide-left .modal-content-main {
+    transform: translateX(-50%);
+    opacity: 0;
 }
 
-/* Main modal and buttons */
-.container button {
-    padding: 10px 20px;
-    margin: 10px;
-    font-size: 16px;
-    cursor: pointer;
+.modal-container.slide-right .modal-content-main {
+    transform: translateX(50%);
+    opacity: 0;
 }
 
-h1 {
-    margin-bottom: 20px;
-}
-
-/* Modal styles */
+/* Login and register modal styling */
 .modal {
     display: none;
     position: fixed;
@@ -64,11 +65,11 @@ h1 {
 }
 
 .modal.slide-in-left {
-    transform: translate(-150%, -50%);
+    transform: translateX(-50%);
 }
 
 .modal.slide-in-right {
-    transform: translate(150%, -50%);
+    transform: translateX(50%);
 }
 
 /* Modal specific styling */
