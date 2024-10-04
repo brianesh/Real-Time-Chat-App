@@ -1,29 +1,44 @@
-// Modal control
-document.getElementById("loginBtn").addEventListener("click", function() {
-    toggleModal("loginModal", "slide-in-left");
-});
+// Get elements
+const loginBtn = document.getElementById("loginBtn");
+const registerBtn = document.getElementById("registerBtn");
+const closeLogin = document.getElementById("closeLogin");
+const closeRegister = document.getElementById("closeRegister");
+const loginModal = document.getElementById("loginModal");
+const registerModal = document.getElementById("registerModal");
+const container = document.querySelector(".container");
 
-document.getElementById("registerBtn").addEventListener("click", function() {
-    toggleModal("registerModal", "slide-in-right");
-});
+function showModal(modalToShow, modalToHide, direction) {
+    // Close any currently open modal
+    if (modalToHide.classList.contains("show")) {
+        modalToHide.classList.remove("show");
+    }
 
-document.getElementById("closeLogin").addEventListener("click", function() {
-    closeModal("loginModal");
-});
+    // Add class to animate main modal to slide
+    container.classList.add(`slide-${direction}`);
 
-document.getElementById("closeRegister").addEventListener("click", function() {
-    closeModal("registerModal");
-});
+    // Show the selected modal
+    modalToShow.classList.add("show");
 
-function toggleModal(modalId, animationClass) {
-    const modal = document.getElementById(modalId);
-    modal.classList.add("show-modal");
-    modal.classList.add(animationClass);
+    // Add modal active class for background
     document.body.classList.add("modal-active");
 }
 
-function closeModal(modalId) {
-    const modal = document.getElementById(modalId);
-    modal.classList.remove("show-modal", "slide-in-left", "slide-in-right");
+function closeModal(modalToClose) {
+    // Close the modal and reset everything
+    modalToClose.classList.remove("show");
+    container.classList.remove("slide-left", "slide-right");
     document.body.classList.remove("modal-active");
 }
+
+// Button click events for opening modals
+loginBtn.addEventListener("click", () => {
+    showModal(loginModal, registerModal, "left");
+});
+
+registerBtn.addEventListener("click", () => {
+    showModal(registerModal, loginModal, "right");
+});
+
+// Close modal events
+closeLogin.addEventListener("click", () => closeModal(loginModal));
+closeRegister.addEventListener("click", () => closeModal(registerModal));
