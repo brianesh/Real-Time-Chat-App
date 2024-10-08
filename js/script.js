@@ -1,61 +1,48 @@
-// Get elements
-const loginBtn = document.getElementById("loginBtn");
-const registerBtn = document.getElementById("registerBtn");
-const closeLogin = document.getElementById("closeLogin");
-const closeRegister = document.getElementById("closeRegister");
-const loginModal = document.getElementById("loginModal");
-const registerModal = document.getElementById("registerModal");
-const container = document.querySelector(".modal-container");
+document.addEventListener('DOMContentLoaded', () => {
+    const loginBtn = document.getElementById('loginBtn');
+    const registerBtn = document.getElementById('registerBtn');
+    const loginModal = document.getElementById('loginModal');
+    const registerModal = document.getElementById('registerModal');
+    const mainModalContent = document.querySelector('.modal-content-main');
+    
+    const closeLogin = document.getElementById('closeLogin');
+    const closeRegister = document.getElementById('closeRegister');
 
-// Function to show a modal and slide main content
-function showModal(modalToShow, modalToHide, direction) {
-    // Hide the other modal if it's open
-    if (modalToHide.classList.contains("show")) {
-        modalToHide.classList.remove("show");
+    // Helper function to open modals and shift main modal
+    function openModal(modalToOpen) {
+        mainModalContent.classList.add('shift');
+        modalToOpen.style.display = 'block';
     }
 
-    // Add the appropriate slide class to the main content
-    container.classList.add(`slide-${direction}`);
-
-    // Show the modal
-    modalToShow.classList.add("show");
-
-    // Add a class to darken the background
-    document.body.classList.add("modal-active");
-}
-
-// Function to close modals and reset the sliding
-function closeModal(modalToClose) {
-    modalToClose.classList.remove("show");
-    container.classList.remove("slide-left", "slide-right");
-    document.body.classList.remove("modal-active");
-}
-
-// Button click events for opening modals
-loginBtn.addEventListener("click", () => {
-    showModal(loginModal, registerModal, "left");
-});
-
-registerBtn.addEventListener("click", () => {
-    showModal(registerModal, loginModal, "right");
-});
-
-// Close modal events
-closeLogin.addEventListener("click", () => closeModal(loginModal));
-closeRegister.addEventListener("click", () => closeModal(registerModal));
-
-// Close modals when clicking outside the modal
-window.addEventListener("click", (event) => {
-    if (event.target === loginModal || event.target === registerModal) {
-        closeModal(loginModal);
-        closeModal(registerModal);
+    // Function to close all modals and reset main content
+    function closeModals() {
+        loginModal.style.display = 'none';
+        registerModal.style.display = 'none';
+        mainModalContent.classList.remove('shift');
     }
-});
 
-// Close modals using "Esc" key
-document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-        closeModal(loginModal);
-        closeModal(registerModal);
-    }
+    // Open login modal
+    loginBtn.addEventListener('click', () => {
+        closeModals();
+        openModal(loginModal);
+    });
+
+    // Open register modal
+    registerBtn.addEventListener('click', () => {
+        closeModals();
+        openModal(registerModal);
+    });
+
+    // Close login modal
+    closeLogin.addEventListener('click', closeModals);
+
+    // Close register modal
+    closeRegister.addEventListener('click', closeModals);
+
+    // Close modals when clicking outside of them
+    window.addEventListener('click', (event) => {
+        if (event.target === loginModal || event.target === registerModal) {
+            closeModals();
+        }
+    });
 });
