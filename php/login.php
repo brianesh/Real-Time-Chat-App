@@ -1,5 +1,5 @@
 <?php
-require 'db.php'; // Include your database connection file
+require 'db.php'; 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = $_POST['username'];
