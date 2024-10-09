@@ -17,7 +17,7 @@ if (!isset($_SESSION['username'])) {
 <body>
     <div class="chat-container">
         <h1>Welcome to the Chat, <?php echo $_SESSION['username']; ?>!</h1>
-        <!-- Chat messages will be displayed here -->
+        
         <div class="chat-box">
             <p>User1: Hello!</p>
             <p>User2: Hi there!</p>
