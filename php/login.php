@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_SESSION['user_id'] = $id;
             $_SESSION['username'] = $username;
             echo "Login successful. Welcome, $username!";
-            // Redirect to chat page or user dashboard
+         
             header('Location: chat.php');
         } else {
             echo "Incorrect password.";
