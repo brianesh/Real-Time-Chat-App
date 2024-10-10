@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt->bind_result($id, $hashedPassword);
         $stmt->fetch();
 
-        // Verify the password
+  
         if (password_verify($password, $hashedPassword)) {
             // Start session and store user data
             session_start();
