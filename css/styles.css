@@ -33,10 +33,9 @@
 }
 
 .modal-content-main.shift {
-    transform: translateX(-50%); /* Move main content left */
+    transform: translateX(-50%); 
 }
 
-/* Close button */
 .close {
     color: #aaa;
     float: right;
