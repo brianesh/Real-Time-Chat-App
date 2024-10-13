@@ -15,7 +15,6 @@
             <button id="registerBtn">Register</button>
         </div>
 
-        <!-- Login Modal -->
         <div id="loginModal" class="modal">
             <div class="modal-content">
                 <span class="close" id="closeLogin">&times;</span>
