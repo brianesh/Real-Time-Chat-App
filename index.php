@@ -33,7 +33,7 @@
             </div>
         </div>
 
-        <!-- Register Modal -->
+        
         <div id="registerModal" class="modal">
             <div class="modal-content">
                 <span class="close" id="closeRegister">&times;</span>
