@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat App</title>
     
-    <!-- Link to CSS file -->
     <link rel="stylesheet" href="css/styles.css">
 
     <!-- Link to JavaScript file -->
