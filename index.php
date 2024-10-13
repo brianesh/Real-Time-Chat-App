@@ -9,7 +9,6 @@
 </head>
 <body>
     <div class="modal-container">
-        <!-- Main Content (Welcome screen) -->
         <div class="modal-content-main">
             <h1>Welcome to Real-Time Chat App</h1>
             <button id="loginBtn">Login</button>
