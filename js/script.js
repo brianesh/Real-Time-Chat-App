@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
         modalToOpen.style.display = 'block';
     }
 
-    // Function to close all modals and reset main content
     function closeModals() {
         loginModal.style.display = 'none';
         registerModal.style.display = 'none';
