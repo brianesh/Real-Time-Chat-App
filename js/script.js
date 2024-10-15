@@ -33,7 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     closeRegister.addEventListener('click', closeModals);
 
-    // Close modals when clicking outside of them
     window.addEventListener('click', (event) => {
         if (event.target === loginModal || event.target === registerModal) {
             closeModals();
