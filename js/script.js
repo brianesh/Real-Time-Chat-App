@@ -29,7 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
         openModal(registerModal);
     });
 
-    // Close login modal
     closeLogin.addEventListener('click', closeModals);
 
     // Close register modal
