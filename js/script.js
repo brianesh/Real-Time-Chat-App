@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
         mainModalContent.classList.remove('shift');
     }
 
-    // Open login modal
     loginBtn.addEventListener('click', () => {
         closeModals();
         openModal(loginModal);
