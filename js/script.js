@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeLogin = document.getElementById('closeLogin');
     const closeRegister = document.getElementById('closeRegister');
 
-    // Helper function to open modals and shift main modal
     function openModal(modalToOpen) {
         mainModalContent.classList.add('shift');
         modalToOpen.style.display = 'block';
