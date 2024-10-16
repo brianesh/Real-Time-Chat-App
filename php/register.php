@@ -7,7 +7,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $confirmPassword = $_POST['confirm_password'];
 
     if ($password === $confirmPassword) {
-        // Hash the password before storing it
         $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
 
         // Check if username is already taken
