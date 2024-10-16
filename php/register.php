@@ -17,7 +17,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if ($checkUserQuery->num_rows > 0) {
             echo "Username already exists. Please choose another one.";
         } else {
-            // Insert new user into database
             $stmt = $mysqli->prepare("INSERT INTO users (username, password) VALUES (?, ?)");
             $stmt->bind_param('ss', $username, $hashedPassword);
 
