@@ -6,7 +6,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $password = $_POST['password'];
     $confirmPassword = $_POST['confirm_password'];
 
-    // Check if the password and confirmation match
     if ($password === $confirmPassword) {
         // Hash the password before storing it
         $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
