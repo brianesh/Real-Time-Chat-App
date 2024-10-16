@@ -9,7 +9,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($password === $confirmPassword) {
         $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
 
-        // Check if username is already taken
         $checkUserQuery = $mysqli->prepare("SELECT id FROM users WHERE username = ?");
         $checkUserQuery->bind_param('s', $username);
         $checkUserQuery->execute();
