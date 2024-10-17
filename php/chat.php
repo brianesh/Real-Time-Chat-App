@@ -24,10 +24,11 @@ if (!isset($_SESSION['username'])) {
         </div>
 
        
-        <form action="send_message.php" method="POST">
-            <input type="text" name="message" placeholder="Type your message..." required>
-            <button type="submit">Send</button>
-        </form>
+        <form id="chatForm" method="POST">
+    <input type="text" id="messageInput" name="message" placeholder="Type your message..." required>
+    <button type="submit">Send</button>
+</form>
+
     </div>
 </body>
 </html>
