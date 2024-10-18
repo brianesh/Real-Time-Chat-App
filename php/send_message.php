@@ -4,7 +4,7 @@ require 'db.php';
 
 if (isset($_POST['message']) && !empty($_POST['message'])) {
     $message = $_POST['message'];
-    $user_id = $_SESSION['user_id']; // Get the logged-in user's ID
+    $user_id = $_SESSION['user_id']; 
 
     // Insert the message into the database
     $stmt = $mysqli->prepare("INSERT INTO messages (user_id, message) VALUES (?, ?)");
