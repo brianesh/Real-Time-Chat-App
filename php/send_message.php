@@ -1,6 +1,6 @@
 <?php
 session_start();
-require 'db.php'; // Include database connection
+require 'db.php'; 
 
 if (isset($_POST['message']) && !empty($_POST['message'])) {
     $message = $_POST['message'];
