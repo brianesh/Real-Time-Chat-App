@@ -1,7 +1,6 @@
 <?php
 require 'db.php'; 
 
-
 $query = "SELECT messages.message, messages.created_at, users.username FROM messages 
           JOIN users ON messages.user_id = users.id ORDER BY messages.created_at ASC";
 $result = $mysqli->query($query);
