@@ -1,7 +1,7 @@
 <?php
 require 'db.php'; 
 
-// Fetch the latest messages from the database
+
 $query = "SELECT messages.message, messages.created_at, users.username FROM messages 
           JOIN users ON messages.user_id = users.id ORDER BY messages.created_at ASC";
 $result = $mysqli->query($query);
