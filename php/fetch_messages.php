@@ -1,5 +1,5 @@
 <?php
-require 'db.php'; // Include database connection
+require 'db.php'; 
 
 // Fetch the latest messages from the database
 $query = "SELECT messages.message, messages.created_at, users.username FROM messages 
