@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const chatBox = document.querySelector('.chat-box');
 
     chatForm.addEventListener('submit', function (event) {
-        event.preventDefault(); // Prevent form from refreshing the page
+        event.preventDefault();
 
         const message = messageInput.value.trim();
 
