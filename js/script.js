@@ -39,7 +39,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    
     const chatForm = document.getElementById('chatForm');
     const messageInput = document.getElementById('messageInput');
     const chatBox = document.querySelector('.chat-box');
