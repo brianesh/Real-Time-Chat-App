@@ -43,7 +43,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const messageInput = document.getElementById('messageInput');
     const chatBox = document.querySelector('.chat-box');
 
-    // Handle message sending via AJAX
     chatForm.addEventListener('submit', function (event) {
         event.preventDefault(); // Prevent form from refreshing the page
 
