@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // Chat functionality: Sending and receiving messages
+    
     const chatForm = document.getElementById('chatForm');
     const messageInput = document.getElementById('messageInput');
     const chatBox = document.querySelector('.chat-box');
