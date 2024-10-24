@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // Fetch chat messages every 2 seconds
+
     function fetchMessages() {
         const xhr = new XMLHttpRequest();
         xhr.open('GET', 'fetch_messages.php', true);
