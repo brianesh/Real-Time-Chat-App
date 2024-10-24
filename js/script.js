@@ -74,7 +74,6 @@ document.addEventListener('DOMContentLoaded', function () {
         xhr.send();
     }
 
-    // Fetch messages initially
     fetchMessages();
 
     // Continuously fetch messages every 2 seconds
