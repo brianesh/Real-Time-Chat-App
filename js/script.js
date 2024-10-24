@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
         xhr.onload = function () {
             if (xhr.status === 200) {
                 chatBox.innerHTML = xhr.responseText;
-                chatBox.scrollTop = chatBox.scrollHeight; // Scroll to the latest message
+                chatBox.scrollTop = chatBox.scrollHeight;
             }
         };
         xhr.send();
