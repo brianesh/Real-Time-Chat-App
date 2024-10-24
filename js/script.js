@@ -76,6 +76,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     fetchMessages();
 
-    // Continuously fetch messages every 2 seconds
+    
     setInterval(fetchMessages, 2000);
 });
