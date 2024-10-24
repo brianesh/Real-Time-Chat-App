@@ -62,7 +62,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-
     function fetchMessages() {
         const xhr = new XMLHttpRequest();
         xhr.open('GET', 'fetch_messages.php', true);
