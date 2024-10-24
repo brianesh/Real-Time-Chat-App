@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
             xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
             xhr.onreadystatechange = function () {
                 if (xhr.readyState === 4 && xhr.status === 200) {
-                    messageInput.value = ''; // Clear the input
+                    messageInput.value = '';
                     fetchMessages(); // Refresh the chat
                 }
             };
