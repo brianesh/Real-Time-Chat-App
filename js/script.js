@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const message = messageInput.value.trim();
 
         if (message) {
-            // Send the message via AJAX to send_message.php
+            
             const xhr = new XMLHttpRequest();
             xhr.open('POST', 'send_message.php', true);
             xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
