@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-    
     const loginBtn = document.getElementById('loginBtn');
     const registerBtn = document.getElementById('registerBtn');
     const loginModal = document.getElementById('loginModal');
