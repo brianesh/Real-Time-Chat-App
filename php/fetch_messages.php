@@ -16,5 +16,4 @@ if ($result->num_rows > 0) {
 } else {
     $messages = '<p>No messages yet. Start the conversation!</p>';
 }
-
 echo $messages;
