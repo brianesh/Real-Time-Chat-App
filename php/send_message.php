@@ -15,4 +15,3 @@ if (isset($_POST['message']) && !empty($_POST['message'])) {
         echo "Error sending message";
     }
 }
-?
