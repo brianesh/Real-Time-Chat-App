@@ -23,7 +23,7 @@ if (!isset($_SESSION['username'])) {
             <p>User2: Hi there!</p>
         </div>
 
-       
+
         <form id="chatForm" method="POST">
     <input type="text" id="messageInput" name="message" placeholder="Type your message..." required>
     <button type="submit">Send</button>
