@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt->bind_result($id, $hashedPassword);
         $stmt->fetch();
 
-  
+
         if (password_verify($password, $hashedPassword)) {
             session_start();
             $_SESSION['user_id'] = $id;
